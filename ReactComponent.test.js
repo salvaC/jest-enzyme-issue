@@ -5,7 +5,8 @@ import { mount } from 'enzyme';
 
 import ReactComponent from './ReactComponent';
 
-// ============================================== TEST =================================================================
+jest.mock('react-dom');
+beforeEach(() => jest.resetModules());
 
 test('initial component state', () => {
   const wrapper = mount(
